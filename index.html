@@ -1,216 +1,763 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sarafat Saiyed - Full Stack | Cybersecurity | Data Enthusiast</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitLife — Modern Gym & Fitness</title>
+    <meta name="description" content="FitLife is a modern, single-page gym website showcasing facilities, services, and membership plans.">
 
-  <!-- Favicon -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- Critical resources -->
-  <link rel="preload" href="styles.css" as="style">
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" 
-        crossorigin="anonymous" referrerpolicy="no-referrer">
-  <!-- ATS-friendly meta -->
-  <meta name="description" content="💻 BCA Student | 🌐 Aspiring Full-Stack Developer | 🔐 Networking & Cybersecurity Enthusiast | 📜 Certified in Python, Cybersecurity & Full Stack">
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-  <!-- Skip-link for accessibility -->
-  <a class="skip-to-content" href="#main-content">Skip to main content</a>
+<body class="custom-scrollbar">
+    <!-- Animated Background Particles -->
+    <div class="particles" id="particles"></div>
 
-  <!-- Header / Nav -->
-  <header class="main-header">
-    <div class="logo">Sarafat Saiyed</div>
-    <nav aria-label="Main navigation">
-      <ul class="nav-list">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-logo">
+            <span class="logo-mark">FL</span>
+            <div class="loading-text">FitLife</div>
+        </div>
+        <div class="loading-bar">
+            <div class="loading-progress"></div>
+        </div>
+    </div>
 
-  <!-- Main -->
-  <main id="main-content">
+    <!-- Header / Nav -->
+    <header class="header" id="header">
+        <div class="container nav">
+            <a class="logo" href="#hero">
+                <span class="logo-mark">FL</span>
+                <span class="logo-text">FitLife</span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#about" data-text="About">About</a>
+                <a href="#facilities" data-text="Facilities">Facilities</a>
+                <a href="#services" data-text="Services">Services</a>
+                <a href="#plans" data-text="Plans">Plans</a>
+                <a href="#testimonials" data-text="Stories">Stories</a>
+                <a href="#contact" class="btn btn-primary small">Join Now</a>
+            </nav>
+
+            <button class="hamburger" id="hamburger" aria-label="Open Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
     <!-- Hero -->
-    <section id="home" class="hero fade-in" aria-labelledby="hero-heading">
-      <div class="hero-content slide-in-left">
-        <h1 id="hero-heading">Sarafat Saiyed</h1>
-        <h2>Empowering Solutions with Full Stack, Cybersecurity & Data Expertise</h2>
-        <p>💻 BCA Student | 🌐 Aspiring Full-Stack Developer | 🔐 Networking & Cybersecurity Enthusiast | 📜 Certified in Python, Cybersecurity & Full Stack</p>
-        <a href="#experience" class="cta-button">Explore My Work <i class="fas fa-arrow-right"></i></a>
-      </div>
+    <section class="hero" id="hero" aria-label="Hero — FitLife">
+        <div class="hero-overlay"></div>
+        <div class="hero-bg-video">
+            <!-- Added video element -->
+            <video autoplay muted loop id="heroVideo" poster="assets/images/poster.jpeg">
+                <source src="assets/videos/5319438-uhd_3840_2160_25fps.mp4" type="video/mp4" playsinline>
+                <source src="assets/videos/7676737-uhd_4096_2160_25fps.mp4" type="video/mp4" playsinline>
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="container hero-inner">
+            <div class="hero-content reveal">
+                <h1 class="title">
+                    <span class="word">Train</span>
+                    <span class="word gradient">Smarter</span>,
+                    <span class="word">Live</span>
+                    <span class="word gradient">Stronger</span>
+                </h1>
+                <p class="subtitle">Premium equipment, elite coaches, and science-backed programs — all under one roof.</p>
+                <div class="hero-cta">
+                    <a href="#plans" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i> View Memberships
+                    </a>
+                    <a href="#about" class="btn btn-ghost">
+                        <i class="fas fa-compass"></i> Explore
+                    </a>
+                </div>
+                <div class="stats">
+                    <div class="stat" data-aos="fade-up" data-aos-delay="100">
+                        <span class="num" data-target="35">0</span>
+                        <span class="label">Expert Trainers</span>
+                    </div>
+                    <div class="stat" data-aos="fade-up" data-aos-delay="200">
+                        <span class="num" data-target="1200">0</span>
+                        <span class="label">Happy Members</span>
+                    </div>
+                    <div class="stat" data-aos="fade-up" data-aos-delay="300">
+                        <span class="num" data-target="24">0</span>
+                        <span class="label">Open Hours</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-card glass reveal" role="note" aria-label="Special Offer">
+                <div class="card-glow"></div>
+                <h3><i class="fa-solid fa-bolt"></i> Limited Time Offer</h3>
+                <p>Get <strong class="highlight">25% OFF</strong> on your first 3 months + free nutrition consultation.</p>
+                <a class="link" href="#contact">
+                    Claim Now
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <div class="offer-timer" id="offerTimer">
+                    <div class="timer-item">
+                        <span class="timer-number" id="days">07</span>
+                        <span class="timer-label">Days</span>
+                    </div>
+                    <div class="timer-item">
+                        <span class="timer-number" id="hours">23</span>
+                        <span class="timer-label">Hours</span>
+                    </div>
+                    <div class="timer-item">
+                        <span class="timer-number" id="minutes">45</span>
+                        <span class="timer-label">Min</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="scroll-indicator" href="#about" aria-label="Scroll to About">
+            <i class="fa-solid fa-angles-down"></i>
+        </a>
     </section>
 
     <!-- About -->
-    <section id="about" class="section-padding reveal" aria-labelledby="about-heading">
-      <h2 id="about-heading">About Me</h2>
-      <img src="my.jpg" alt="Sarafat Saiyed - Professional Headshot" class="profile-pic">
-      <p>
-        Hello! I'm Sarafat Saiyed, a passionate BCA student specializing in <strong>full-stack development</strong>, 
-        <strong>networking</strong>, and <strong>cybersecurity</strong>. I build tech-driven solutions that solve real-world problems.
-      </p>
+    <section class="section" id="about">
+        <div class="container grid two-col">
+            <div class="content reveal">
+                <h2 class="section-title">About <span class="gradient">FitLife</span></h2>
+                <p class="section-intro">We're a community-first fitness club blending cutting-edge facilities with expert coaching. Whether you're a beginner or a pro, we build personalized paths to help you lift better, run faster, and recover smarter.</p>
 
-      <h3>Certifications</h3>
-      <ul class="certifications-list">
-        <li><i class="fas fa-award"></i> Star Cyber Secure User – IANT</li>
-        <li><i class="fas fa-award"></i> Star Information Technology Essentials – IANT</li>
-        <li><i class="fas fa-award"></i> Star Python – IANT</li>
-        <li><i class="fas fa-award"></i> Full Stack Development – CodexIntern</li>
-        <li><i class="fas fa-award"></i> Coursera – HTML, JavaScript, Python, RDBMS</li>
-      </ul>
-    </section>
+                <ul class="checklist">
+                    <li><i class="fa-solid fa-circle-check"></i> Evidence-based training methodology</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Certified personal trainers & physiotherapists</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Clean, spacious, and safety-first environment</li>
+                    <li><i class="fa-solid fa-circle-check"></i> 24/7 member support and guidance</li>
+                </ul>
 
-    <!-- Skills -->
-    <section id="skills" class="section-padding reveal" aria-labelledby="skills-heading">
-      <h2 id="skills-heading">Skills</h2>
-      <div class="skills-container">
-        <div class="skill-category">
-          <h3>Technical Expertise</h3>
-          <ul class="skills-list">
-            <li><i class="fas fa-code"></i> Languages: Java, JavaScript, Python, PHP, C</li>
-            <li><i class="fas fa-globe"></i> Web: HTML5, CSS3, jQuery, SQL</li>
-            <li><i class="fas fa-cogs"></i> Frameworks: Django, Laravel, Spring, Kafka, Maven, REST API</li>
-            <li><i class="fas fa-database"></i> Database: RDBMS</li>
-            <li><i class="fas fa-cloud"></i> Cloud/DevOps: AWS (Elastic Beanstalk, EC2, CloudWatch)</li>
-            <li><i class="fas fa-chart-bar"></i> Data: Power BI, Data Structures, Algorithms, ML</li>
-            <li><i class="fas fa-shield-alt"></i> Security: Computer Networks, Log Inspection, Web Security</li>
-          </ul>
+                <div class="badges">
+                    <span class="badge"><i class="fa-solid fa-star"></i> ISO Clean Facility</span>
+                    <span class="badge"><i class="fa-solid fa-heart-pulse"></i> Heart-Rate Tracking</span>
+                    <span class="badge"><i class="fa-solid fa-fire"></i> HIIT Certified</span>
+                    <span class="badge"><i class="fa-solid fa-award"></i> Premium Equipment</span>
+                </div>
+
+                <div class="cta-secondary">
+                    <a href="#facilities" class="btn btn-ghost">
+                        <i class="fas fa-eye"></i> Tour Our Facilities
+                    </a>
+                </div>
+            </div>
+            <div class="media reveal">
+                <div class="stacked-photos">
+                    <div class="photo top">
+                        <!-- Added image element with lazy loading -->
+                        <img class="lazy" data-src="assets/images/Strength_zone.jpg" alt="Person lifting weights in strength training zone">
+                        <div class="photo-overlay">
+                            <i class="fas fa-dumbbell"></i>
+                            <span>Strength Training</span>
+                        </div>
+                    </div>
+                    <div class="photo bottom">
+                        <!-- Added image element with lazy loading -->
+                        <img class="lazy" data-src="assets/images/Cardio_Studio.jpg" alt="Person running on a treadmill in cardio zone">
+                        <div class="photo-overlay">
+                            <i class="fas fa-heart"></i>
+                            <span>Cardio Zone</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="stats-mini">
+                    <div class="mini-stat">
+                        <i class="fas fa-trophy"></i>
+                        <span>500+ Success Stories</span>
+                    </div>
+                    <div class="mini-stat">
+                        <i class="fas fa-clock"></i>
+                        <span>Open 24/7</span>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="skill-category">
-          <h3>Professional Skills</h3>
-          <ul class="skills-list">
-            <li><i class="fas fa-comments"></i> Communication & Technical Writing</li>
-            <li><i class="fas fa-tasks"></i> Planning & Project Management</li>
-            <li><i class="fas fa-users"></i> Teamwork & Collaboration</li>
-            <li><i class="fas fa-lightbulb"></i> Problem-Solving & Critical Thinking</li>
-          </ul>
-        </div>
-      </div>
     </section>
 
-    <!-- Experience -->
-    <section id="experience" class="section-padding reveal" aria-labelledby="experience-heading">
-      <h2 id="experience-heading">Experience & Job Simulations</h2>
-      <div class="experience-grid">
-        <!-- Card 1 -->
-        <article class="experience-card">
-          <h3>AWS APAC Solutions Architecture</h3>
-          <p class="experience-date">Aug 2025 – Forage</p>
-          <ul>
-            <li><i class="fas fa-check-circle"></i> Designed scalable AWS architecture with Elastic Beanstalk.</li>
-            <li><i class="fas fa-check-circle"></i> Presented cost-optimized solutions to stakeholders.</li>
-          </ul>
-          <p class="technologies-used"><strong>Skills:</strong> AWS, Pricing, Technical Communication</p>
-          <a href="https://github.com/Sarafat230041/my_achivement/blob/351031b0b93beb6192ae2f87933fd411afd1af94/aws.png" target="_blank" rel="noopener" class="experience-link">View on GitHub <i class="fas fa-external-link-alt"></i></a>
-        </article>
+    <!-- Facilities -->
+    <section class="section alt" id="facilities">
+        <div class="container">
+            <h2 class="section-title center reveal">World-Class <span class="gradient">Facilities</span></h2>
+            <p class="section-desc center reveal">From heavy lifting to mindful movement, we've built spaces that inspire transformation.</p>
 
-        <!-- Card 2 -->
-        <article class="experience-card">
-          <h3>Deloitte Australia Technology Simulation</h3>
-          <p class="experience-date">Aug 2025 – Forage</p>
-          <ul>
-            <li><i class="fas fa-check-circle"></i> Built data-visualization dashboard proposal.</li>
-            <li><i class="fas fa-check-circle"></i> Applied Python & SDLC best practices.</li>
-          </ul>
-          <p class="technologies-used"><strong>Skills:</strong> Python, Planning, Software Development</p>
-          <a href="https://github.com/Sarafat230041/my_achivement/blob/351031b0b93beb6192ae2f87933fd411afd1af94/tech.png" target="_blank" rel="noopener" class="experience-link">View on GitHub <i class="fas fa-external-link-alt"></i></a>
-        </article>
+            <div class="cards grid three-col">
+                <article class="card facility-card reveal" data-tilt>
+                    <div class="card-image">
+                        <!-- Added image element with lazy loading -->
+                        <img class="lazy" data-src="assets/images/man-lifting-dumbbells.webp" alt="Strength training area with power racks and dumbbells">
+                        <div class="card-overlay">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Strength Zone</h3>
+                        <p>Power racks, bumper plates, and calibrated dumbbells for progressive overload and strength building.</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check"></i> Olympic Weightlifting Platform</li>
+                            <li><i class="fas fa-check"></i> Premium Dumbbells (5-150lbs)</li>
+                            <li><i class="fas fa-check"></i> Power Racks with Safety Bars</li>
+                        </ul>
+                    </div>
+                </article>
 
-        <!-- Card 3 -->
-        <article class="experience-card">
-          <h3>British Airways Data Science Simulation</h3>
-          <p class="experience-date">Aug 2025 – Forage</p>
-          <ul>
-            <li><i class="fas fa-check-circle"></i> Scraped & analyzed customer sentiment data.</li>
-            <li><i class="fas fa-check-circle"></i> Built predictive models for satisfaction forecasting.</li>
-          </ul>
-          <p class="technologies-used"><strong>Skills:</strong> Machine Learning, Data Modeling, Visualization</p>
-          <a href="https://github.com/Sarafat230041/my_achivement/blob/ff2bb3a0c63e90d7e700d08aae964e187190d439/ds.png" target="_blank" rel="noopener" class="experience-link">View on GitHub <i class="fas fa-external-link-alt"></i></a>
-        </article>
+                <article class="card facility-card reveal" data-tilt>
+                    <div class="card-image">
+                        <!-- Added image element with lazy loading -->
+                        <img class="lazy" data-src="assets/images/Cardio_Studio.jpg" alt="Cardio studio with treadmills and rowing machines">
+                        <div class="card-overlay">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Cardio Studio</h3>
+                        <p>Treadmills, rowers, assault bikes, and live metrics for smarter endurance training.</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check"></i> Smart Treadmills with TV Screens</li>
+                            <li><i class="fas fa-check"></i> Concept2 Rowing Machines</li>
+                            <li><i class="fas fa-check"></i> Heart Rate Monitoring Systems</li>
+                        </ul>
+                    </div>
+                </article>
 
-        <!-- Card 4 -->
-        <article class="experience-card">
-          <h3>J.P. Morgan Software Engineering</h3>
-          <p class="experience-date">Aug 2025 – Forage</p>
-          <ul>
-            <li><i class="fas fa-check-circle"></i> Developed micro-services with Spring & Kafka.</li>
-            <li><i class="fas fa-check-circle"></i> Integrated REST APIs and SQL databases.</li>
-          </ul>
-          <p class="technologies-used"><strong>Skills:</strong> Java, Spring, Kafka, REST, SQL</p>
-          <a href="https://github.com/Sarafat230041/my_achivement/blob/ff2bb3a0c63e90d7e700d08aae964e187190d439/jp.png" target="_blank" rel="noopener" class="experience-link">View on GitHub <i class="fas fa-external-link-alt"></i></a>
-        </article>
+                <article class="card facility-card reveal" data-tilt>
+                    <div class="card-image">
+                        <!-- Added image element with lazy loading -->
+                        <img class="lazy" data-src="assets/images/class-3.jpg" alt="Yoga and meditation studio">
+                        <div class="card-overlay">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Mind & Mobility</h3>
+                        <p>Yoga, pilates, and mobility sessions to restore balance and flexibility.</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check"></i> Heated Yoga Studio</li>
+                            <li><i class="fas fa-check"></i> Pilates Equipment</li>
+                            <li><i class="fas fa-check"></i> Meditation Corner</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
 
-        <!-- Card 5 -->
-        <article class="experience-card">
-          <h3>Deloitte Australia Cyber Simulation</h3>
-          <p class="experience-date">Aug 2025 – Forage</p>
-          <ul>
-            <li><i class="fas fa-check-circle"></i> Investigated logs to detect anomalies.</li>
-            <li><i class="fas fa-check-circle"></i> Responded to simulated security incidents.</li>
-          </ul>
-          <p class="technologies-used"><strong>Skills:</strong> Network Security, Log Inspection, Incident Response</p>
-          <a href="https://github.com/Sarafat230041/my_achivement/blob/351031b0b93beb6192ae2f87933fd411afd1af94/cyber.png" target="_blank" rel="noopener" class="experience-link">View on GitHub <i class="fas fa-external-link-alt"></i></a>
-        </article>
-      </div>
-    </section>
+            <div class="features grid four-col">
+                <div class="feature reveal">
+                    <img src="assets/images/wifi.jpg" alt="Free Wi-Fi" class="feature-image">
+                    <span>Free Wi-Fi</span>
+                </div>
+                <div class="feature reveal">
+                    <img src="assets/images/locker.webp" alt="Smart Lockers" class="feature-image">
+                    <span>Smart Lockers</span>
+                </div>
+                <div class="feature reveal">
+                    <img src="assets/images/shower.webp" alt="Premium Showers" class="feature-image">
+                    <span>Premium Showers</span>
+                </div>
+                <div class="feature reveal">
+                    <img src="assets/images/recovery.jpeg" alt="Recovery Bar" class="feature-image">
+                    <span>Recovery Bar</span>
+                </div>
+            </div>
 
-    
 
-    <!-- Contact -->
-    <section id="contact" class="section-padding reveal" aria-labelledby="contact-heading">
-      <h2 id="contact-heading">Contact</h2>
-      <p>Looking for collaboration or job opportunities? Let’s connect!</p>
+            <!-- Services -->
+            <section class="section" id="services">
+                <div class="container">
+                    <h2 class="section-title center reveal">Coaching & <span class="gradient">Services</span></h2>
+                    <p class="section-desc center reveal">Programs designed to meet you where you are — and accelerate your progress.</p>
 
-      <form id="contact-form" class="contact-form">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    <div class="cards grid three-col">
+                        <article class="card service-card reveal">
+                            <div class="service-image">
+                                <img src="assets/images/Personal_training.webp" alt="Personal Training" class="lazy">
+                            </div>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                            <h3>Personal Training</h3>
+                            <p>1-on-1 coaching tailored to your goals with form feedback, progress tracking, and weekly assessments.</p>
+                            <ul class="service-features">
+                                <li>Personalized workout plans</li>
+                                <li>Form correction & technique</li>
+                                <li>Progress monitoring</li>
+                                <li>Nutritional guidance</li>
+                            </ul>
+                            <div class="service-price">
+                                <span class="price">₹2,499</span>
+                                <span class="period">/session</span>
+                            </div>
+                        </article>
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
+                        <article class="card service-card reveal featured">
+                            <div class="service-ribbon">Most Popular</div>
+                            <div class="service-image">
+                                <img src="assets/images/Nutrition_Plan.jpeg" alt="Nutrition Plans" class="lazy">
+                            </div>
+                            <h3>Nutrition Plans</h3>
+                            <p>Macro-aligned meal plans, supplements guidance, and habit coaching for optimal results.</p>
+                            <ul class="service-features">
+                                <li>Custom meal planning</li>
+                                <li>Macro tracking support</li>
+                                <li>Supplement recommendations</li>
+                                <li>Weekly check-ins</li>
+                            </ul>
+                            <div class="service-price">
+                                <span class="price">₹1,999</span>
+                                <span class="period">/month</span>
+                            </div>
+                        </article>
 
-        <button type="submit" class="submit-button">Send Message <i class="fas fa-paper-plane"></i></button>
-      </form>
+                        <article class="card service-card reveal">
+                            <div class="service-image">
+                                <img src="assets/images/Online_coaching.jpeg" alt="Online Coaching" class="lazy">
+                            </div>
 
-      <div class="social-media">
-        <h3>Connect with me</h3>
-        <a href="https://www.linkedin.com/in/saiyed-sarafat-ab506b287" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/Sarafat230041" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://x.com/Saiyedshar42471?t=kUW3GJU5z1O3iKdW32E5-Q&s=09" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-        <a href="mailto:saiyedsarafat91@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-      </div>
-    </section>
-  </main>
+                            <h3>Online Coaching</h3>
+                            <p>Remote programming with video form checks, progress dashboards, and virtual consultations.</p>
+                            <ul class="service-features">
+                                <li>Remote workout programming</li>
+                                <li>Video form analysis</li>
+                                <li>Progress tracking app</li>
+                                <li>Virtual consultations</li>
+                            </ul>
+                            <div class="service-price">
+                                <span class="price">₹1,499</span>
+                                <span class="period">/month</span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
 
-  <!-- Footer -->
-  <footer class="main-footer">
-    <div class="quick-links">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#experience">Experience</a>
-      
-      <a href="#contact">Contact</a>
-    </div>
-    <p>&copy; <span id="current-year"></span> Sarafat Saiyed. All rights reserved.</p>
-  </footer>
+            <!-- Plans / Pricing -->
+            <section class="section alt" id="plans">
+                <div class="container">
+                    <h2 class="section-title center reveal">Membership <span class="gradient">Plans</span></h2>
+                    <p class="section-desc center reveal">Choose your path to fitness. Switch between monthly and yearly to save more.</p>
 
-  <!-- Scroll-to-top -->
-  <button id="scrollToTopBtn" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+                    <div class="billing-toggle reveal" role="group" aria-label="Billing cycle">
+                        <span class="billing-label">Monthly</span>
+                        <label class="switch">
+                    <input type="checkbox" id="billingToggle" aria-label="Toggle yearly billing">
+                    <span class="slider"></span>
+                </label>
+                        <span class="billing-label">Yearly <span class="save">Save 20%</span></span>
+                    </div>
 
-  <!-- Scripts -->
-  <script src="script.js"></script>
+                    <div class="cards grid three-col pricing-cards">
+                        <article class="card price-card reveal" data-plan="starter">
+                            <div class="plan-header">
+                                <h3>Starter</h3>
+                                <p class="plan-tag">Perfect for beginners</p>
+                            </div>
+                            <div class="plan-price">
+                                <span class="currency">₹</span>
+                                <span class="amount" data-month="999" data-year="799">999</span>
+                                <span class="period">/mo</span>
+                            </div>
+                            <ul class="plan-features">
+                                <li><i class="fa-solid fa-check"></i> Gym floor access</li>
+                                <li><i class="fa-solid fa-check"></i> 1 group class per week</li>
+                                <li><i class="fa-solid fa-check"></i> Smart locker included</li>
+                                <li><i class="fa-solid fa-check"></i> Basic fitness assessment</li>
+                                <li><i class="fa-solid fa-times"></i> Personal training</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-outline plan-btn" data-plan="Starter">
+                                <i class="fas fa-rocket"></i> Choose Starter
+                            </a>
+                        </article>
+
+                        <article class="card price-card featured reveal" data-plan="pro" aria-label="Recommended plan">
+                            <div class="plan-ribbon">Most Popular</div>
+                            <div class="plan-header">
+                                <h3>Pro</h3>
+                                <p class="plan-tag">Get results faster</p>
+                            </div>
+                            <div class="plan-price">
+                                <span class="currency">₹</span>
+                                <span class="amount" data-month="1999" data-year="1599">1999</span>
+                                <span class="period">/mo</span>
+                            </div>
+                            <ul class="plan-features">
+                                <li><i class="fa-solid fa-check"></i> All group classes unlimited</li>
+                                <li><i class="fa-solid fa-check"></i> 2 personal training sessions/month</li>
+                                <li><i class="fa-solid fa-check"></i> Recovery bar access</li>
+                                <li><i class="fa-solid fa-check"></i> Nutrition consultation</li>
+                                <li><i class="fa-solid fa-check"></i> Body composition analysis</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-primary plan-btn" data-plan="Pro">
+                                <i class="fas fa-crown"></i> Choose Pro
+                            </a>
+                        </article>
+
+                        <article class="card price-card reveal" data-plan="elite">
+                            <div class="plan-header">
+                                <h3>Elite</h3>
+                                <p class="plan-tag">All-inclusive luxury</p>
+                            </div>
+                            <div class="plan-price">
+                                <span class="currency">₹</span>
+                                <span class="amount" data-month="3499" data-year="2799">3499</span>
+                                <span class="period">/mo</span>
+                            </div>
+                            <ul class="plan-features">
+                                <li><i class="fa-solid fa-check"></i> Unlimited personal training</li>
+                                <li><i class="fa-solid fa-check"></i> Weekly body composition scans</li>
+                                <li><i class="fa-solid fa-check"></i> Priority class booking</li>
+                                <li><i class="fa-solid fa-check"></i> Custom meal planning</li>
+                                <li><i class="fa-solid fa-check"></i> 24/7 trainer support</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-outline plan-btn" data-plan="Elite">
+                                <i class="fas fa-diamond"></i> Choose Elite
+                            </a>
+                        </article>
+                    </div>
+
+                    <div class="pricing-guarantee reveal">
+                        <div class="guarantee-content">
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <h4>30-Day Money-Back Guarantee</h4>
+                                <p>Not satisfied? Get a full refund within 30 days, no questions asked.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials -->
+            <section class="section" id="testimonials">
+                <div class="container">
+                    <h2 class="section-title center reveal">Member <span class="gradient">Success Stories</span></h2>
+                    <p class="section-desc center reveal">Real transformations from real members</p>
+
+                    <div class="testimonials-slider reveal" id="testimonialSlider" role="region" aria-roledescription="carousel">
+                        <div class="slide active">
+                            <div class="testimonial-content">
+                                <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                                <p>"I dropped 8 kg in 12 weeks and feel stronger than ever. The trainers here are incredibly knowledgeable and supportive. FitLife changed my life!"</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="author">
+                                <div class="author-avatar">
+                                    <div class="avatar-placeholder female"></div>
+                                </div>
+                                <div class="author-info">
+                                    <span class="name">Riya Shah</span>
+                                    <span class="title">Software Engineer</span>
+                                    <span class="achievement">Lost 8kg in 12 weeks</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slide">
+                            <div class="testimonial-content">
+                                <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                                <p>"The Pro plan is worth every rupee. Love the programming, the recovery area, and the community atmosphere. Best investment I've made for my health."</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="author">
+                                <div class="author-avatar">
+                                    <div class="avatar-placeholder male"></div>
+                                </div>
+                                <div class="author-info">
+                                    <span class="name">Aditya Verma</span>
+                                    <span class="title">Business Owner</span>
+                                    <span class="achievement">Gained 5kg muscle mass</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slide">
+                            <div class="testimonial-content">
+                                <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                                <p>"Clean facilities, friendly staff, and truly motivating environment. The yoga classes helped my chronic back pain enormously. Highly recommended!"</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="author">
+                                <div class="author-avatar">
+                                    <div class="avatar-placeholder female-2"></div>
+                                </div>
+                                <div class="author-info">
+                                    <span class="name">Simran Kaur</span>
+                                    <span class="title">Yoga Instructor</span>
+                                    <span class="achievement">Improved flexibility 40%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slider-controls">
+                        <button class="slider-btn prev" id="prevBtn" aria-label="Previous testimonial">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                        <div class="slider-dots" id="sliderDots" role="tablist" aria-label="Testimonial slides"></div>
+                        <button class="slider-btn next" id="nextBtn" aria-label="Next testimonial">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+
+
+
+            <!-- Footer -->
+            <!-- Contact -->
+            <section class="section alt" id="contact">
+                <div class="container grid two-col">
+                    <div class="content reveal">
+                        <h2 class="section-title">Ready to <span class="gradient">Transform</span>?</h2>
+                        <p class="section-intro">
+                            Join thousands of members who've achieved their fitness goals. Our team will contact you within 24 hours to get you started.
+                        </p>
+
+                        <form class="form" id="joinForm" novalidate>
+                            <div class="form-group">
+                                <div class="form-row">
+                                    <label for="name">Full Name *</label>
+                                    <div class="input-wrapper">
+                                        <i class="fas fa-user"></i>
+                                        <input id="name" name="name" type="text" placeholder="Enter your full name" required>
+                                    </div>
+                                    <small class="error" id="nameError">Please enter your full name</small>
+                                </div>
+
+                                <div class="form-row">
+                                    <label for="email">Email Address *</label>
+                                    <div class="input-wrapper">
+                                        <i class="fas fa-envelope"></i>
+                                        <input id="email" name="email" type="email" placeholder="your.email@example.com" required>
+                                    </div>
+                                    <small class="error" id="emailError">Please enter a valid email address</small>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-row">
+                                    <label for="phone">Phone Number *</label>
+                                    <div class="input-wrapper">
+                                        <i class="fas fa-phone"></i>
+                                        <input id="phone" name="phone" type="tel" placeholder="+91 98765 43210" required pattern="^[0-9\s+()-]{8,}$">
+                                    </div>
+                                    <small class="error" id="phoneError">Please enter a valid phone number</small>
+                                </div>
+
+                                <div class="form-row">
+                                    <label for="plan">Preferred Plan</label>
+                                    <div class="input-wrapper">
+                                        <i class="fas fa-crown"></i>
+                                        <select id="plan" name="plan">
+                <option value="Starter">Starter - ₹999/mo</option>
+                <option value="Pro" selected>Pro - ₹1,999/mo</option>
+                <option value="Elite">Elite - ₹3,499/mo</option>
+              </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <label for="goals">Fitness Goals (Optional)</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-bullseye"></i>
+                                    <textarea id="goals" name="goals" placeholder="Tell us about your fitness goals..." rows="3"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary full" id="submitBtn">
+            <i class="fas fa-paper-plane"></i>
+            <span class="btn-text">Request Callback</span>
+            <div class="btn-loader">
+              <i class="fas fa-spinner fa-spin"></i>
+            </div>
+          </button>
+                                <p class="form-note">By submitting this form, you agree to our terms and privacy policy.</p>
+                            </div>
+
+                            <div class="form-success" id="formSuccess" role="status" aria-live="polite"></div>
+                        </form>
+                    </div>
+
+                    <div class="media reveal">
+                        <div class="contact-cards">
+                            <div class="contact-card map-card glass">
+                                <h3><i class="fa-solid fa-location-dot"></i> Visit Our Gym</h3>
+                                <p>FitLife Premium Fitness Center<br>SG Highway, Ahmedabad, Gujarat 380015</p>
+
+                                <!-- Google Maps Embed -->
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.0493552525384!2d72.49335431542694!3d23.03051392155743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84f0f8a2a1a5%3A0x9df07cabc17dbf75!2sSG%20Highway%2C%20Ahmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1699863138909!5m2!1sen!2sin"
+                                    width="100%" height="200" class="map-iframe" allowfullscreen="" loading="lazy" title="Map showing FitLife Premium Fitness Center location"></iframe>
+
+                                <a href="https://www.google.com/maps/dir/?api=1&destination=SG+Highway+Ahmedabad" target="_blank" rel="noopener" class="btn btn-outline small">
+                                    <i class="fas fa-directions"></i> Get Directions
+                                </a>
+                            </div>
+
+                            <div class="contact-info">
+                                <div class="contact-item">
+                                    <i class="fas fa-phone"></i>
+                                    <div>
+                                        <span class="label">Call Us</span>
+                                        <a href="tel:+919876543210" class="value">+91 98765 43210</a>
+                                    </div>
+                                </div>
+
+                                <div class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <div>
+                                        <span class="label">Email</span>
+                                        <a href="mailto:hello@fitlife.gym" class="value">hello@fitlife.gym</a>
+                                    </div>
+                                </div>
+
+                                <div class="contact-item">
+                                    <i class="fas fa-clock"></i>
+                                    <div>
+                                        <span class="label">Hours</span>
+                                        <span class="value">24/7 Access Available</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="perks-grid">
+                            <div class="perk">
+                                <i class="fa-solid fa-dumbbell"></i>
+                                <span>First session absolutely free</span>
+                            </div>
+                            <div class="perk">
+                                <i class="fa-solid fa-clock"></i>
+                                <span>Open 24/7 for members</span>
+                            </div>
+                            <div class="perk">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                <span>Student & senior discounts</span>
+                            </div>
+                            <div class="perk">
+                                <i class="fa-solid fa-shield-alt"></i>
+                                <span>30-day money-back guarantee</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="container footer-inner">
+                    <div class="footer-content">
+                        <div class="brand-section">
+                            <a class="logo" href="#hero">
+                                <span class="logo-mark">FL</span>
+                                <span class="logo-text">FitLife</span>
+                            </a>
+                            <p class="brand-desc">
+                                Transform your body, elevate your mind, and join a community that celebrates every milestone of your fitness journey.
+                            </p>
+                            <div class="social-links">
+                                <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram" class="social-link">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube" class="social-link">
+                                    <i class="fa-brands fa-youtube"></i>
+                                </a>
+                                <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook" class="social-link">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+                                <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter" class="social-link">
+                                    <i class="fa-brands fa-x-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="footer-links">
+                            <div class="link-group">
+                                <h4>Quick Links</h4>
+                                <a href="#about">About Us</a>
+                                <a href="#facilities">Facilities</a>
+                                <a href="#services">Services</a>
+                                <a href="#plans">Membership Plans</a>
+                            </div>
+
+                            <div class="link-group">
+                                <h4>Programs</h4>
+                                <a href="#services">Personal Training</a>
+                                <a href="#services">Group Classes</a>
+                                <a href="#services">Nutrition Coaching</a>
+                                <a href="#services">Online Training</a>
+                            </div>
+
+                            <div class="link-group">
+                                <h4>Support</h4>
+                                <a href="#contact">Contact Us</a>
+                                <a href="#">FAQ</a>
+                                <a href="#">Privacy Policy</a>
+                                <a href="#">Terms of Service</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer-bottom">
+                        <p>&copy; <span id="currentYear"></span> FitLife Premium Fitness. All rights reserved. | Designed with ❤️ for your fitness journey</p>
+                        <a href="#hero" class="back-to-top" id="backToTop" aria-label="Back to top">
+                            <i class="fa-solid fa-arrow-up"></i>
+                        </a>
+                    </div>
+                </div>
+            </footer>
+
+
+
+            <!-- Success Modal -->
+            <div class="modal-overlay" id="successModal">
+                <div class="modal">
+                    <div class="modal-content">
+                        <div class="success-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3>Welcome to FitLife!</h3>
+                        <p>Thank you for your interest! Our team will contact you within 24 hours to schedule your free consultation.</p>
+                        <button class="btn btn-primary" id="closeModal">
+                    <i class="fas fa-thumbs-up"></i>
+                    Awesome!
+                </button>
+                    </div>
+                </div>
+            </div>
+
+            <script src="app.js"></script>
 </body>
+
 </html>
