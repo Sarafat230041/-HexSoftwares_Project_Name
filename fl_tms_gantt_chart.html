@@ -1,0 +1,117 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font-sans)}
+.gantt-wrap{width:100%;overflow-x:auto;padding:4px 0 16px}
+.gantt-title{font-size:13px;font-weight:500;color:var(--color-text-primary);padding:10px 0 6px;letter-spacing:.3px}
+table{border-collapse:collapse;min-width:900px;width:100%}
+th{font-size:10px;font-weight:500;color:var(--color-text-secondary);text-align:center;padding:4px 2px;border-bottom:1px solid var(--color-border-tertiary);white-space:nowrap}
+td{font-size:11px;color:var(--color-text-primary);padding:0;height:22px;border-bottom:.5px solid var(--color-border-tertiary)}
+.task-label{padding:0 8px;white-space:nowrap;font-size:11px;color:var(--color-text-primary);width:210px;min-width:210px}
+.sprint-label{font-weight:500;color:#185FA5;font-size:11px;padding:0 8px}
+.cell{width:22px;min-width:22px;max-width:22px;text-align:center;border-left:.5px solid var(--color-border-tertiary)}
+.bar-sprint{background:#2e7d32;height:16px;border-radius:2px}
+.bar-task{background:#90CAF9;height:14px;border-radius:2px}
+.bar-ui{background:#B0BEC5;height:14px;border-radius:2px}
+.row-sprint td{background:rgba(33,150,243,.04)}
+.row-sprint .task-label{font-weight:600;color:#185FA5}
+.day-hdr{font-size:9px;color:var(--color-text-tertiary)}
+.month-hdr td{background:var(--color-background-secondary);font-size:10px;font-weight:500;color:var(--color-text-secondary);border-bottom:.5px solid var(--color-border-secondary)}
+.legend{display:flex;gap:16px;margin:10px 0 2px;flex-wrap:wrap}
+.leg{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--color-text-secondary)}
+.leg-sq{width:12px;height:12px;border-radius:2px}
+</style>
+<h2 class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden">FL-TMS 2.0 Agile Gantt Chart showing sprint tasks from July 12 to August 9</h2>
+<div class="legend">
+  <span class="leg"><span class="leg-sq" style="background:#2e7d32"></span>Sprint header</span>
+  <span class="leg"><span class="leg-sq" style="background:#90CAF9"></span>Dev task</span>
+  <span class="leg"><span class="leg-sq" style="background:#B0BEC5"></span>Design / UI task</span>
+</div>
+<div class="gantt-wrap">
+<table>
+<colgroup>
+  <col style="width:210px">
+  <!-- 28 day columns Jul12–Aug8 -->
+  <col span="28" style="width:22px">
+</colgroup>
+<thead>
+<tr class="month-hdr">
+  <th style="text-align:left;padding-left:8px">Task</th>
+  <th colspan="7" style="text-align:center;border-left:1px solid var(--color-border-secondary)">Jul 12</th>
+  <th colspan="7" style="text-align:center;border-left:1px solid var(--color-border-secondary)">Jul 19</th>
+  <th colspan="7" style="text-align:center;border-left:1px solid var(--color-border-secondary)">Jul 26</th>
+  <th colspan="7" style="text-align:center;border-left:1px solid var(--color-border-secondary)">Aug 2</th>
+</tr>
+<tr>
+  <th style="text-align:left;padding-left:8px"></th>
+  <th class="day-hdr">F</th><th class="day-hdr">S</th><th class="day-hdr">S</th><th class="day-hdr">M</th><th class="day-hdr">T</th><th class="day-hdr">W</th><th class="day-hdr">T</th>
+  <th class="day-hdr" style="border-left:1px solid var(--color-border-tertiary)">F</th><th class="day-hdr">S</th><th class="day-hdr">S</th><th class="day-hdr">M</th><th class="day-hdr">T</th><th class="day-hdr">W</th><th class="day-hdr">T</th>
+  <th class="day-hdr" style="border-left:1px solid var(--color-border-tertiary)">F</th><th class="day-hdr">S</th><th class="day-hdr">S</th><th class="day-hdr">M</th><th class="day-hdr">T</th><th class="day-hdr">W</th><th class="day-hdr">T</th>
+  <th class="day-hdr" style="border-left:1px solid var(--color-border-tertiary)">F</th><th class="day-hdr">S</th><th class="day-hdr">S</th><th class="day-hdr">M</th><th class="day-hdr">T</th><th class="day-hdr">W</th><th class="day-hdr">T</th>
+</tr>
+</thead>
+<tbody id="gantt-body"></tbody>
+</table>
+</div>
+<script>
+const COLS=28;
+function bar(start,span,type){
+  const cls=type==='sprint'?'bar-sprint':type==='ui'?'bar-ui':'bar-task';
+  return `<div style="display:flex;align-items:center;height:100%;padding:3px 1px"><div class="${cls}" style="width:${span*22-4}px"></div></div>`;
+}
+function emptyBar(){return`<div style="height:22px"></div>`}
+
+const rows=[
+  // [label, isSprintHeader, barStart(0-based col), barSpan, barType]
+  ['Sprint#1: Basic Project Structure',true, 2,14,'sprint'],
+  ['  UI Designing',false,            0,5,'ui'],
+  ['  Database Management',false,     4,5,'task'],
+  ['Sprint#2: Login (Admin)',true,    9,12,'sprint'],
+  ['  UI Designing',false,           9,5,'ui'],
+  ['  Email and Password verification',false,12,5,'task'],
+  ['  View Course Details',false,    14,5,'task'],
+  ['  View College Details',false,   15,5,'task'],
+  ['  View Student Details',false,   16,5,'task'],
+  ['Sprint#3: Manage Indicators',true,17,5,'sprint'],
+  ['  Add Indicator',false,          17,4,'task'],
+  ['  View Indicators',false,        18,4,'task'],
+  ['  Update Indicator',false,       19,3,'task'],
+  ['  Delete Indicator',false,       20,3,'task'],
+  ['Sprint#4: Manage Courses',true,  21,5,'sprint'],
+  ['  Add Course',false,             21,4,'task'],
+  ['  View Courses',false,           22,3,'task'],
+  ['  Update Course',false,          22,3,'task'],
+  ['  Delete Course',false,          23,3,'task'],
+  ['Sprint#5: Manage Semesters',true,24,4,'sprint'],
+  ['  Add Semester',false,           24,3,'task'],
+  ['  View Semesters',false,         24,3,'task'],
+  ['  Update Semester',false,        25,2,'task'],
+  ['  Delete Semester',false,        25,2,'task'],
+  ['Sprint#6: Manage Institutes',true,26,4,'sprint'],
+  ['  Add Institute',false,          26,3,'task'],
+  ['  View Institutes',false,        26,3,'task'],
+  ['  Update Institute',false,       27,2,'task'],
+  ['  Deactivate Institute',false,   27,2,'task'],
+];
+
+const tbody=document.getElementById('gantt-body');
+rows.forEach(([label,isSprint,s,span,type])=>{
+  const tr=document.createElement('tr');
+  if(isSprint)tr.className='row-sprint';
+  let html=`<td class="${isSprint?'sprint-label':'task-label'}">${label}</td>`;
+  for(let c=0;c<COLS;c++){
+    const atBar=c===s;
+    const inBar=c>s&&c<s+span;
+    if(atBar){
+      const w=(span*22-4);
+      const cls=type==='sprint'?'bar-sprint':type==='ui'?'bar-ui':'bar-task';
+      html+=`<td class="cell" colspan="${span}" style="padding:3px 1px 3px 2px"><div class="${cls}" style="width:${w}px"></div></td>`;
+      c+=span-1;
+    } else {
+      html+=`<td class="cell"></td>`;
+    }
+  }
+  tr.innerHTML=html;
+  tbody.appendChild(tr);
+});
+</script>
