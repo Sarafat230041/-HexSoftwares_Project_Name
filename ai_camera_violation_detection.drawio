@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="1600" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+
+    <!-- Initial Node -->
+    <mxCell id="2" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1">
+      <mxGeometry x="276" y="30" width="24" height="24" as="geometry" />
+    </mxCell>
+
+    <!-- Camera Captures Image -->
+    <mxCell id="3" value="Camera Captures Image" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="198" y="90" width="180" height="44" as="geometry" />
+    </mxCell>
+
+    <!-- AI Analyzes Image -->
+    <mxCell id="4" value="AI Analyzes Image" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="208" y="174" width="160" height="44" as="geometry" />
+    </mxCell>
+
+    <!-- Vehicle Detected? -->
+    <mxCell id="5" value="Vehicle Detected?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="213" y="258" width="150" height="80" as="geometry" />
+    </mxCell>
+
+    <!-- Read License Plate -->
+    <mxCell id="6" value="Read License Plate" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="208" y="388" width="160" height="44" as="geometry" />
+    </mxCell>
+
+    <!-- Plate Readable? -->
+    <mxCell id="7" value="Plate Readable?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="213" y="472" width="150" height="80" as="geometry" />
+    </mxCell>
+
+    <!-- Check Speed / Traffic Rules -->
+    <mxCell id="8" value="Check Speed / Traffic Rules" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="198" y="602" width="180" height="44" as="geometry" />
+    </mxCell>
+
+    <!-- Violation Detected? -->
+    <mxCell id="9" value="Violation Detected?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="213" y="686" width="150" height="80" as="geometry" />
+    </mxCell>
+
+    <!-- Create Violation Record -->
+    <mxCell id="10" value="Create Violation Record" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="208" y="816" width="180" height="44" as="geometry" />
+    </mxCell>
+
+    <!-- Capture Evidence -->
+    <mxCell id="11" value="Capture Evidence" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="208" y="900" width="160" height="44" as="geometry" />
+    </mxCell>
+
+    <!-- Send Alert to Officer -->
+    <mxCell id="12" value="Send Alert to Officer" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="208" y="984" width="160" height="44" as="geometry" />
+    </mxCell>
+
+    <!-- Discard Image -->
+    <mxCell id="13" value="Discard Image" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="30" y="1100" width="130" height="44" as="geometry" />
+    </mxCell>
+
+    <!-- Flag for Manual Review -->
+    <mxCell id="14" value="Flag for Manual Review" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="208" y="1100" width="170" height="44" as="geometry" />
+    </mxCell>
+
+    <!-- Final Node -->
+    <mxCell id="15" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" vertex="1" parent="1">
+      <mxGeometry x="268" y="1210" width="40" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="16" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1">
+      <mxGeometry x="278" y="1220" width="20" height="20" as="geometry" />
+    </mxCell>
+
+    <!-- EDGES -->
+
+    <!-- Initial → Camera -->
+    <mxCell id="30" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;" edge="1" source="2" target="3" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Camera → AI Analyzes -->
+    <mxCell id="31" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;" edge="1" source="3" target="4" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- AI Analyzes → Vehicle Detected? -->
+    <mxCell id="32" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;" edge="1" source="4" target="5" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Vehicle Detected? → Read License Plate [Yes] -->
+    <mxCell id="33" value="Yes" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;fontSize=11;exitX=0.5;exitY=1;" edge="1" source="5" target="6" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Vehicle Detected? → Discard Image [No] -->
+    <mxCell id="34" value="No" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;fontSize=11;exitX=0;exitY=0.5;" edge="1" source="5" target="13" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="95" y="298" />
+          <mxPoint x="95" y="1122" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Read License Plate → Plate Readable? -->
+    <mxCell id="35" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;" edge="1" source="6" target="7" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Plate Readable? → Check Speed [Yes] -->
+    <mxCell id="36" value="Yes" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;fontSize=11;exitX=0.5;exitY=1;" edge="1" source="7" target="8" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="288" y="552" />
+          <mxPoint x="288" y="602" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Plate Readable? → Flag for Manual Review [No] -->
+    <mxCell id="37" value="No" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;fontSize=11;exitX=0;exitY=0.5;" edge="1" source="7" target="14" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="160" y="512" />
+          <mxPoint x="160" y="1122" />
+          <mxPoint x="208" y="1122" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Check Speed → Violation Detected? -->
+    <mxCell id="38" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;" edge="1" source="8" target="9" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Violation Detected? → Create Violation Record [Yes] -->
+    <mxCell id="39" value="Yes" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;fontSize=11;exitX=0.5;exitY=1;" edge="1" source="9" target="10" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Violation Detected? → Flag for Manual Review [No] -->
+    <mxCell id="40" value="No" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;fontSize=11;exitX=0;exitY=0.5;" edge="1" source="9" target="14" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="160" y="726" />
+          <mxPoint x="160" y="1122" />
+          <mxPoint x="208" y="1122" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Create Violation Record → Capture Evidence -->
+    <mxCell id="41" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;" edge="1" source="10" target="11" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Capture Evidence → Send Alert to Officer -->
+    <mxCell id="42" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;" edge="1" source="11" target="12" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Send Alert to Officer → End -->
+    <mxCell id="43" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;" edge="1" source="12" target="15" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="288" y="1230" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Discard Image → End -->
+    <mxCell id="44" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;" edge="1" source="13" target="15" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="95" y="1230" />
+          <mxPoint x="268" y="1230" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Flag for Manual Review → End -->
+    <mxCell id="45" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;" edge="1" source="14" target="15" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="288" y="1230" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+  </root>
+</mxGraphModel>

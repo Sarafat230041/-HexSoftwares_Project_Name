@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="650" pageHeight="1700" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+
+    <!-- Initial Node -->
+    <mxCell id="2" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1">
+      <mxGeometry x="288" y="30" width="24" height="24" as="geometry" />
+    </mxCell>
+
+    <!-- Citizen Login -->
+    <mxCell id="3" value="Citizen Login" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="220" y="90" width="160" height="44" as="geometry" />
+    </mxCell>
+
+    <!-- View My Challans -->
+    <mxCell id="4" value="View My Challans" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="220" y="174" width="160" height="44" as="geometry" />
+    </mxCell>
+
+    <!-- Any Pending Challans? -->
+    <mxCell id="5" value="Any Pending Challans?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="215" y="258" width="170" height="90" as="geometry" />
+    </mxCell>
+
+    <!-- Select Challan -->
+    <mxCell id="6" value="Select Challan" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="220" y="398" width="160" height="44" as="geometry" />
+    </mxCell>
+
+    <!-- View Challan Details -->
+    <mxCell id="7" value="View Challan Details" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="220" y="482" width="160" height="44" as="geometry" />
+    </mxCell>
+
+    <!-- Choose Payment Method -->
+    <mxCell id="8" value="Choose Payment Method" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="210" y="566" width="180" height="44" as="geometry" />
+    </mxCell>
+
+    <!-- Payment Method? -->
+    <mxCell id="9" value="Payment Method?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="215" y="650" width="170" height="90" as="geometry" />
+    </mxCell>
+
+    <!-- Redirect to Payment Gateway -->
+    <mxCell id="10" value="Redirect to Payment Gateway" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="180" y="800" width="180" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- Enter Card Details -->
+    <mxCell id="11" value="Enter Card Details" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="200" y="900" width="160" height="44" as="geometry" />
+    </mxCell>
+
+    <!-- Payment Successful? -->
+    <mxCell id="12" value="Payment Successful?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="215" y="984" width="170" height="90" as="geometry" />
+    </mxCell>
+
+    <!-- Update Payment Status -->
+    <mxCell id="13" value="Update Payment Status" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="160" y="1130" width="170" height="44" as="geometry" />
+    </mxCell>
+
+    <!-- Retry Payment -->
+    <mxCell id="14" value="Retry Payment" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="390" y="1030" width="140" height="44" as="geometry" />
+    </mxCell>
+
+    <!-- Generate Payment Slip -->
+    <mxCell id="15" value="Generate Payment Slip" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="440" y="800" width="170" height="44" as="geometry" />
+    </mxCell>
+
+    <!-- Display No Pending Message -->
+    <mxCell id="16" value="Display No Pending&#xa;Message" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="30" y="1130" width="150" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- Generate Receipt -->
+    <mxCell id="17" value="Generate Receipt" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="165" y="1224" width="160" height="44" as="geometry" />
+    </mxCell>
+
+    <!-- Pay at Counter -->
+    <mxCell id="18" value="Pay at Counter" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="445" y="900" width="150" height="44" as="geometry" />
+    </mxCell>
+
+    <!-- Final Node -->
+    <mxCell id="19" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" vertex="1" parent="1">
+      <mxGeometry x="280" y="1330" width="40" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="20" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1">
+      <mxGeometry x="290" y="1340" width="20" height="20" as="geometry" />
+    </mxCell>
+
+    <!-- EDGES -->
+
+    <!-- Initial → Citizen Login -->
+    <mxCell id="40" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;" edge="1" source="2" target="3" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Citizen Login → View My Challans -->
+    <mxCell id="41" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;" edge="1" source="3" target="4" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- View My Challans → Any Pending? -->
+    <mxCell id="42" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;" edge="1" source="4" target="5" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Any Pending? → Select Challan [Yes] -->
+    <mxCell id="43" value="Yes" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;fontSize=11;exitX=0.5;exitY=1;" edge="1" source="5" target="6" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Any Pending? → Display No Pending [No] -->
+    <mxCell id="44" value="No" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;fontSize=11;exitX=0;exitY=0.5;" edge="1" source="5" target="16" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="105" y="303" />
+          <mxPoint x="105" y="1155" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Select Challan → View Challan Details -->
+    <mxCell id="45" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;" edge="1" source="6" target="7" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- View Challan Details → Choose Payment Method -->
+    <mxCell id="46" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;" edge="1" source="7" target="8" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Choose Payment Method → Payment Method? -->
+    <mxCell id="47" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;" edge="1" source="8" target="9" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Payment Method? → Redirect [Online] -->
+    <mxCell id="48" value="Online" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;fontSize=11;exitX=0.5;exitY=1;" edge="1" source="9" target="10" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="300" y="800" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Payment Method? → Generate Payment Slip [Offline] -->
+    <mxCell id="49" value="Offline" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;fontSize=11;exitX=1;exitY=0.5;" edge="1" source="9" target="15" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="525" y="695" />
+          <mxPoint x="525" y="822" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Redirect → Enter Card Details -->
+    <mxCell id="50" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;" edge="1" source="10" target="11" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Enter Card Details → Payment Successful? -->
+    <mxCell id="51" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;" edge="1" source="11" target="12" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Payment Successful? → Update Payment Status [Yes] -->
+    <mxCell id="52" value="Yes" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;fontSize=11;exitX=0.5;exitY=1;" edge="1" source="12" target="13" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="300" y="1130" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Payment Successful? → Retry Payment [No] -->
+    <mxCell id="53" value="No" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;fontSize=11;exitX=1;exitY=0.5;" edge="1" source="12" target="14" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="460" y="1029" />
+          <mxPoint x="460" y="1052" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Retry Payment → Redirect to Gateway (loop) -->
+    <mxCell id="54" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;" edge="1" source="14" target="10" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="580" y="1052" />
+          <mxPoint x="580" y="825" />
+          <mxPoint x="360" y="825" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Update Payment Status → Generate Receipt -->
+    <mxCell id="55" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;" edge="1" source="13" target="17" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Generate Payment Slip → Pay at Counter -->
+    <mxCell id="56" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;" edge="1" source="15" target="18" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Display No Pending → End -->
+    <mxCell id="57" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;" edge="1" source="16" target="19" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="105" y="1350" />
+          <mxPoint x="280" y="1350" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Generate Receipt → End -->
+    <mxCell id="58" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;" edge="1" source="17" target="19" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="245" y="1350" />
+          <mxPoint x="280" y="1350" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Pay at Counter → End -->
+    <mxCell id="59" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;" edge="1" source="18" target="19" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="520" y="1350" />
+          <mxPoint x="320" y="1350" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+  </root>
+</mxGraphModel>
